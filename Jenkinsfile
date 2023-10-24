@@ -8,7 +8,7 @@ environment {
 }
 
 stages {
-   stage ('terraform init') {
+   stage ('Inicio del proceso') {
         steps {
                 sh 'terraform init'
                 sh 'terraform plan'
@@ -24,7 +24,7 @@ stages {
         }
 
 
-    stage('Aplicacion Destroy') {
+    stage('Destruir Aplicacion') {
         input {
             message "Quieres destruir la infraestructura?"
             ok "si"
